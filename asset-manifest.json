@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/currency-exchange/static/js/main.2ec3065a.js",
-    "static/js/477.71727bfc.chunk.js": "/currency-exchange/static/js/477.71727bfc.chunk.js",
+    "main.js": "/currency-exchange/static/js/main.d630d46b.js",
+    "static/js/477.c3632315.chunk.js": "/currency-exchange/static/js/477.c3632315.chunk.js",
     "static/js/864.dbfe7b62.chunk.js": "/currency-exchange/static/js/864.dbfe7b62.chunk.js",
     "static/js/558.75a8626b.chunk.js": "/currency-exchange/static/js/558.75a8626b.chunk.js",
     "index.html": "/currency-exchange/index.html",
-    "main.2ec3065a.js.map": "/currency-exchange/static/js/main.2ec3065a.js.map",
-    "477.71727bfc.chunk.js.map": "/currency-exchange/static/js/477.71727bfc.chunk.js.map",
+    "main.d630d46b.js.map": "/currency-exchange/static/js/main.d630d46b.js.map",
+    "477.c3632315.chunk.js.map": "/currency-exchange/static/js/477.c3632315.chunk.js.map",
     "864.dbfe7b62.chunk.js.map": "/currency-exchange/static/js/864.dbfe7b62.chunk.js.map",
     "558.75a8626b.chunk.js.map": "/currency-exchange/static/js/558.75a8626b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2ec3065a.js"
+    "static/js/main.d630d46b.js"
   ]
 }
