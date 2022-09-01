@@ -1,9 +1,9 @@
 const myHeaders = new Headers();
-myHeaders.append("apikey", "5PVBKnyUWDzJyz5ksWX8Nf3NojAoUzIw");
+myHeaders.append('apikey', 'MZ7UQiqecnRhg5CLb1kX1yFib6yVFTFn');
 
 const requestOptions = {
-  method: "GET",
-  redirect: "follow",
+  method: 'GET',
+  redirect: 'follow',
   headers: myHeaders,
 };
 

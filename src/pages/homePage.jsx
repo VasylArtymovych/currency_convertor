@@ -1,26 +1,34 @@
-import Form from "components/Form/Form";
-import { useEffect, useState } from "react";
-import requestOptions from "headers";
+import Form from 'components/Form/Form';
+import { useEffect, useState } from 'react';
+import requestOptions from 'headers';
 
-const HomePage = () => {
+const HomePage = ({ current }) => {
   const [fetching, setFetching] = useState(false);
   const [currency, setCurrency] = useState([]);
 
   useEffect(() => {
     setFetching(true);
-    fetch("https://api.apilayer.com/fixer/symbols", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
+    fetch('https://api.apilayer.com/fixer/symbols', requestOptions)
+      .then(response => response.json())
+      .then(result => {
         const currency = Object.keys(result.symbols);
         setCurrency(currency);
       })
-      .catch((error) => console.log("error", error))
+      .catch(error => console.log('error', error))
       .finally(() => {
         setFetching(false);
       });
   }, []);
 
-  return <>{fetching ? <div>Loading...</div> : <Form currency={currency} />}</>;
+  return (
+    <>
+      {fetching ? (
+        <div>Loading...</div>
+      ) : (
+        <Form currency={currency} currentCurrency={current} />
+      )}
+    </>
+  );
 };
 
 export default HomePage;
