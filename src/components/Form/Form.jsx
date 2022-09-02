@@ -3,8 +3,10 @@ import { LoadingButton } from '@mui/lab';
 import { CurrencyExchange } from '@mui/icons-material';
 import { useState } from 'react';
 import requestOptions from 'headers/headers';
+import { currencyObj } from 'currency';
+const currency = Object.keys(currencyObj);
 
-function Form({ currency, currentCurrency }) {
+function Form({ currentCurrency }) {
   const [loading, setLoading] = useState(false);
   const [value, setValue] = useState('');
   const [from, setFrom] = useState('');
@@ -14,13 +16,12 @@ function Form({ currency, currentCurrency }) {
   const handleClick = async () => {
     setLoading(true);
     await fetch(
-      `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${value}`,
+      `https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${from}&amount=${value}`,
       requestOptions
     )
       .then(response => response.json())
       .then(result => {
         setResult(result);
-        console.log(result);
       })
       .catch(error => console.log('error', error))
       .finally(() => {
@@ -80,9 +81,11 @@ function Form({ currency, currentCurrency }) {
         </LoadingButton>
 
         {result && (
-          <p style={{ marginTop: '10px' }}>Rate: {result?.info?.rate}</p>
+          <p style={{ marginTop: '10px' }}>
+            Rate: {Number(result?.info?.rate).toFixed(2)}
+          </p>
         )}
-        {result && <p>Result: {result?.result}</p>}
+        {result && <p>Result: {Number(result?.result).toFixed(2)}</p>}
       </Box>
     </>
   );
