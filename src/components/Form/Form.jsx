@@ -2,7 +2,6 @@ import { Autocomplete, Box, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import { CurrencyExchange } from '@mui/icons-material';
 import { useState } from 'react';
-
 import requestOptions from 'headers/headers';
 
 function Form({ currency, currentCurrency }) {
@@ -12,9 +11,9 @@ function Form({ currency, currentCurrency }) {
   const [to, setTo] = useState('');
   const [result, setResult] = useState(null);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     setLoading(true);
-    fetch(
+    await fetch(
       `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${value}`,
       requestOptions
     )
@@ -28,6 +27,7 @@ function Form({ currency, currentCurrency }) {
         setLoading(false);
       });
   };
+
   return (
     <>
       <Box

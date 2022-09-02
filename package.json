@@ -2,7 +2,7 @@
   "name": "currency-exchange",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VasylArtymovych.github.io/currency-exchange/",
+  "homepage": "https://VasylArtymovych.github.io/currency_convertor/",
   "dependencies": {
     "@emotion/css": "^11.10.0",
     "@emotion/react": "^11.10.4",
