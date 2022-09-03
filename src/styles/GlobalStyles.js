@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
   html {
@@ -7,6 +7,8 @@ export const GlobalStyles = css`
   }
   body {
     margin: 0;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
   }
   * h1,
   h2,
@@ -41,7 +43,7 @@ export const GlobalStyles = css`
     color: inherit;
   }
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
 `;

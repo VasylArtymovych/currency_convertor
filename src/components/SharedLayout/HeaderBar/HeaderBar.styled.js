@@ -1,14 +1,17 @@
-import styled from "@emotion/styled";
-import { theme } from "styles";
-import { NavLink } from "react-router-dom";
+import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
-export const StyledNavLink = styled(NavLink)({
-  fontSize: " 22px",
-  marginRight: "20px",
-});
+export const StyledNavLink = styled(NavLink)`
+  font-size: 22px;
+  margin-right: 20px;
 
-export const Container = styled.div`
-  width: 100vw;
-  padding: 20px 0;
-  background: ${theme.colors.gray};
+  &.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    top: 18px;
+  }
 `;

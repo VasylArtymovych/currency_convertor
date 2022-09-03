@@ -6,7 +6,7 @@ import requestOptions from 'headers/headers';
 import { currencyObj } from 'currency';
 const currency = Object.keys(currencyObj);
 
-function Form({ currentCurrency }) {
+function Form() {
   const [loading, setLoading] = useState(false);
   const [value, setValue] = useState('');
   const [from, setFrom] = useState('');
@@ -54,9 +54,7 @@ function Form({ currentCurrency }) {
           id="combo-box-demo"
           options={currency}
           sx={{ width: 200, mt: '10px' }}
-          renderInput={params => (
-            <TextField {...params} label={currentCurrency ?? 'To'} />
-          )}
+          renderInput={params => <TextField {...params} label={'To'} />}
           onChange={e => {
             setTo(e.target.textContent);
           }}

@@ -1,9 +1,12 @@
-import { AppBar, Toolbar } from "@mui/material";
-import { StyledNavLink } from "./HeaderBar.styled";
+import { AppBar, Toolbar } from '@mui/material';
+import { StyledNavLink } from './HeaderBar.styled';
 
 function HeaderBar() {
   return (
-    <AppBar sx={{ backgroundColor: "black" }} position="static">
+    <AppBar
+      sx={{ backgroundColor: 'black', boxShadow: ' 0 8px 6px -6px #363434;' }}
+      position="static"
+    >
       <Toolbar>
         <StyledNavLink to="/">Converter</StyledNavLink>
 
