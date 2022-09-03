@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/currency_convertor/static/js/main.b4cc1925.js",
+    "main.js": "/currency_convertor/static/js/main.dfe10550.js",
     "static/js/720.6201d5bf.chunk.js": "/currency_convertor/static/js/720.6201d5bf.chunk.js",
-    "static/js/9.e373f63b.chunk.js": "/currency_convertor/static/js/9.e373f63b.chunk.js",
+    "static/js/735.2093c3a3.chunk.js": "/currency_convertor/static/js/735.2093c3a3.chunk.js",
     "static/js/301.267d22f0.chunk.js": "/currency_convertor/static/js/301.267d22f0.chunk.js",
     "index.html": "/currency_convertor/index.html",
-    "main.b4cc1925.js.map": "/currency_convertor/static/js/main.b4cc1925.js.map",
+    "main.dfe10550.js.map": "/currency_convertor/static/js/main.dfe10550.js.map",
     "720.6201d5bf.chunk.js.map": "/currency_convertor/static/js/720.6201d5bf.chunk.js.map",
-    "9.e373f63b.chunk.js.map": "/currency_convertor/static/js/9.e373f63b.chunk.js.map",
+    "735.2093c3a3.chunk.js.map": "/currency_convertor/static/js/735.2093c3a3.chunk.js.map",
     "301.267d22f0.chunk.js.map": "/currency_convertor/static/js/301.267d22f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b4cc1925.js"
+    "static/js/main.dfe10550.js"
   ]
 }
