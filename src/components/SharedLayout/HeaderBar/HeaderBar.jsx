@@ -8,9 +8,9 @@ function HeaderBar() {
       position="static"
     >
       <Toolbar>
-        <StyledNavLink to="/">Converter</StyledNavLink>
+        <StyledNavLink to="/">CONVERTER</StyledNavLink>
 
-        <StyledNavLink to="/rates">Rates</StyledNavLink>
+        <StyledNavLink to="/rates">RATES</StyledNavLink>
       </Toolbar>
     </AppBar>
   );

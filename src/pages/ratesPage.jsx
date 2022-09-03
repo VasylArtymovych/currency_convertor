@@ -1,22 +1,9 @@
 import { useEffect, useState } from 'react';
-import requestOptions from 'headers/headers';
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from '@mui/material';
-import { KeyboardArrowUp } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import Loader from 'components/Loader';
-
-const titleStyle = {
-  fontSize: '22px',
-  background: 'grey',
-};
+import { KeyboardArrowUp } from '@mui/icons-material';
+import requestOptions from 'headers/headers';
+import TableRates from 'components/TableRates';
 
 const RatesPage = () => {
   const [rates, setRates] = useState([]);
@@ -26,7 +13,7 @@ const RatesPage = () => {
   useEffect(() => {
     setIsLoading(true);
     fetch(
-      'https://api.apilayer.com/exchangerates_data/latest?base=UAH',
+      'https://api.apilayer.com/exchangerates_data/latest?base=USD',
       requestOptions
     )
       .then(response => response.json())
@@ -61,49 +48,7 @@ const RatesPage = () => {
 
   return (
     <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 350 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="center" sx={titleStyle}>
-                  Currency
-                </TableCell>
-                <TableCell align="center" sx={titleStyle}>
-                  Rates UAH
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rates.map(row => (
-                <TableRow
-                  key={row[0]}
-                  sx={{
-                    '&:last-child td, &:last-child th': { border: 0 },
-                  }}
-                >
-                  <TableCell
-                    component="th"
-                    scope="row"
-                    align="center"
-                    sx={{ fontSize: '18px' }}
-                  >
-                    {row[0]}
-                  </TableCell>
-                  <TableCell
-                    align="center"
-                    sx={{ fontSize: '18px', color: 'darkBlue' }}
-                  >
-                    {row[1]}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      )}
+      {isLoading ? <Loader /> : <TableRates rates={rates} />}
       {isVisible && (
         <StyledButton onClick={handleScrollToTop}>
           <KeyboardArrowUp />
