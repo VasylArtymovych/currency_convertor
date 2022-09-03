@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcurrency_exchange=self.webpackChunkcurrency_exchange||[]).push([[864],{5864:function(e,c,n){n.r(c);var r=n(184);c.default=function(){return(0,r.jsx)("div",{children:"Rates"})}}}]);
-//# sourceMappingURL=864.dbfe7b62.chunk.js.map
